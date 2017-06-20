@@ -26,6 +26,12 @@ const MainMenu = (props) => (
     <MenuItem
       containerElement={<Link to="/coming-soon" />}
       primaryText="Coming soon" />
+    <MenuItem
+      containerElement={<Link to="/about" />}
+      primaryText="About" />
+    <MenuItem
+      containerElement={<Link to="/admin" />}
+      primaryText="Admin" />
   </IconMenu>
 );
 
