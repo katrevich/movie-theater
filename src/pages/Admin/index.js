@@ -6,12 +6,15 @@ import {
   ActionSettingsApplications,
   AvVideoLibrary,
   ActionTheaters,
-  ActionEventSeat  } from 'material-ui/svg-icons';
+  ActionEventSeat,
+  FileFolder
+} from 'material-ui/svg-icons';
 
 import Settings from './Settings';
 import Rooms from './Rooms';
 import Movies from './Movies';
 import Shows from './Shows';
+import Schedule from './Schedule';
 
 const AdminLayout = styled.div`
   display: flex;
@@ -41,6 +44,7 @@ const AdminContent = styled.div`
 
 
 class Admin extends Component {
+  
   render() {
     return (
       <AdminLayout>
@@ -62,6 +66,10 @@ class Admin extends Component {
               primaryText="Shows"
               leftIcon={<ActionTheaters />}
               containerElement={<Link to="/admin/shows" />} />
+            <ListItem
+              primaryText="Schedule"
+              leftIcon={<FileFolder />}
+              containerElement={<Link to="/admin/schedule" />} />
           </List>
         </AdminSidebar>
         <AdminContent>
@@ -72,6 +80,7 @@ class Admin extends Component {
             <Route path="/admin/rooms" component={Rooms} />
             <Route path="/admin/movies" component={Movies} />
             <Route path="/admin/shows" component={Shows} />
+            <Route path="/admin/schedule" component={Schedule} />
           </Switch>
         </AdminContent>
       </AdminLayout>
